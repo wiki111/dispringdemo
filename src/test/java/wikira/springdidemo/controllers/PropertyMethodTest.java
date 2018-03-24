@@ -14,7 +14,7 @@ public class PropertyMethodTest {
     @Before
     public void setUp() throws Exception {
         this.propertyInjectedController = new PropertyInjectedController();
-        this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
+        this.propertyInjectedController.greetingService = new GreetingServiceImpl();
     }
 
     @Test

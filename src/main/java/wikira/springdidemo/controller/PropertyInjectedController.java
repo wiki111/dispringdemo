@@ -1,6 +1,7 @@
 package wikira.springdidemo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import wikira.springdidemo.services.GreetingService;
 
@@ -10,10 +11,11 @@ import wikira.springdidemo.services.GreetingService;
 public class PropertyInjectedController {
 
     @Autowired
-    public GreetingService greetingServiceImpl;
+    @Qualifier("greetingServiceImpl")
+    public GreetingService greetingService;
 
     public String sayHello(){
-        return greetingServiceImpl.sayGreeting();
+        return greetingService.sayGreeting();
     }
 
 }
