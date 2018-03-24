@@ -5,12 +5,11 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile("es")
 @Primary
-@Profile("en")
-public class GreetingServicePrimary implements GreetingService {
-
+public class GreetingServicePrimarySpanish implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "A wizard is never late nor too early, but comes exactly when he chooses to.";
+        return "Un mago nunca llega tarde ni demasiado temprano, pero llega exactamente cuando lo desea.";
     }
 }
